@@ -11,9 +11,11 @@ class ResourceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
+
+        return "You are in the page number: "  . $id;
     }
 
     /**

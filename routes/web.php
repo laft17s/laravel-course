@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$_ROUTECONTROLLER = "App\Http\Controllers";
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,4 +35,6 @@ Route::get('/', function () {
 //     return "Post: " . $id;
 // });
 
-Route::get('/home', 'App\Http\Controllers\ExampleController@home')->name('home');
+Route::get('/home', $_ROUTECONTROLLER . '\ExampleController@home')->name('home');
+
+Route::get('/index/{id}', $_ROUTECONTROLLER . '\ResourceController@index')->name('index');
