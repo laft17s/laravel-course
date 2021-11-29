@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return "About Us Section";
+});
+
+Route::get('/contact', function () {
+    return "Contact Section";
+});
+
+Route::get('/forum', function () {
+    return "Forum Section";
+});
+
+Route::get('/post/{id}', function ($id) {
+    return "Post: " . $id;
+});
